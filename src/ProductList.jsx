@@ -255,10 +255,10 @@ const handlePlantsClick = (e) => {
     setShowCart(false); // Hide the cart when navigating to About Us
 };
 
-   const handleContinueShopping = (e) => {
-    e.preventDefault();
-    setShowCart(false);
+   const handleContinueShopping = () => {
+   setSowProductList(true);
   };
+
     return (
         <div>
              <div className="navbar" style={styleObj}>
