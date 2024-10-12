@@ -16,17 +16,30 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleContinueShopping = (e) => {
-    e.preventDefault();
-    onContinueShopping();
+    if (e) e.preventDefault();
+    onContinueShopping(e); // Call the function passed from the parent component to show the plant items list
   };
 
+  function handleCheckoutShopping(e) {
+    e.preventDefault();
+    alert('Functionality to be added for future reference'); // Display an alert on checkout button click
+  }
+
   const handleIncrement = (item) => {
-    dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
+    const newQauntity = item.quantity + 1;
+    dispatch(updateQuantity({ name: item.name, quantity: newQauntity }));
   };
 
   const handleDecrement = (item) => {
-    if (item.quantity > 1) {
-      dispatch(updateQuantity({ name: item.name, quantity: item.quantity - 1 }));
+    if (item.quantity > 0) {
+      const newQauntity = item.quantity - 1;
+      if (newQauntity === 0) {
+        dispatch(removeItem({ name: item.name }));
+      } else {
+      dispatch(updateQuantity({ name: item.name, quantity: newQauntity }));
+     }
+     } else {
+      dispatch(removeItem({ name: item.name }));
     }
   };
 
@@ -64,8 +77,10 @@ const CartItem = ({ onContinueShopping }) => {
       <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'></div>
       <div className="continue_shopping_btn">
         <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
+     
+
         <br />
-        <button className="get-started-button1">Checkout</button>
+        <button className="get-started-button1" onClick={(e) => handleCheckoutShopping(e)}>Checkout</button>
       </div>
     </div>
   );
