@@ -66,7 +66,7 @@ The header component should:
 
 1. Clone the repository from GitHub:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/watashiaashishgurung/ParadiseNursery.git
     ```
 2. Install the necessary dependencies:
     ```bash
