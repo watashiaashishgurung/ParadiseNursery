@@ -250,3 +250,18 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+  .centered-category-container {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px 0; /* Add margin top and bottom */
+  }
+  
+  .centered-category {
+    text-align: center; /* Center the text horizontally */
+    font-size: 28px; /* Set the font size */
+    color: black; /* Black text color */
+    border-top: 2px solid black; /* Add border to the top */
+    border-bottom: 2px solid black; /* Add border to the bottom */
+    display: inline-block; /* Display as inline block */
+  }

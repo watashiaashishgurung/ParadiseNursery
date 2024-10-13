@@ -43,9 +43,9 @@ function App() {
       </div>
       <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
         <ProductList />
-        <button className="view-cart-button" onClick={handleViewCart}>
+        {/*<button className="view-cart-button" onClick={handleViewCart}>
           View Cart
-        </button>
+        </button>*/}
       </div>
       <div className={`cart-container ${showCart ? 'visible' : ''}`}>
         <CartItem onContinueShopping={handleContinueShopping} />
