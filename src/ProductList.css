@@ -250,6 +250,11 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+  .product-button.added {
+    background-color: #e4242d; /* Green background */
+    color: white; /* White text */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+  }
   .centered-category-container {
     display: flex; /* Use Flexbox */
     justify-content: center; /* Center horizontally */
